@@ -18,39 +18,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8u-4b-R5x">
-                                <rect key="frame" x="247" y="383" width="107" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2h-6Z-2DG" userLabel="RecordButton">
-                                <rect key="frame" x="235" y="250" width="137" height="99"/>
+                                <rect key="frame" x="235" y="243" width="130" height="97"/>
                                 <state key="normal" title="Button" image="recordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k9y-cM-KYh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrp-np-40H" userLabel="StopRecordButton">
-                                <rect key="frame" x="256" y="427" width="89" height="88"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="36H-yb-dZI"/>
-                                    <constraint firstAttribute="width" constant="89" id="ggr-lU-PBf"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrp-np-40H" userLabel="StopRecordButton">
+                                <rect key="frame" x="273" y="427" width="54" height="89"/>
                                 <state key="normal" title="Button" image="stopRecordingButton"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBu-37-RNc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8u-4b-R5x">
+                                <rect key="frame" x="247" y="385" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="z2h-6Z-2DG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-5" id="7Zo-jr-52Q"/>
-                            <constraint firstItem="t8u-4b-R5x" firstAttribute="centerX" secondItem="z2h-6Z-2DG" secondAttribute="centerX" constant="5.5" id="Ko9-UE-lIb"/>
-                            <constraint firstItem="vrp-np-40H" firstAttribute="top" secondItem="t8u-4b-R5x" secondAttribute="bottom" constant="23" id="OXI-1x-Be7"/>
-                            <constraint firstItem="t8u-4b-R5x" firstAttribute="top" secondItem="z2h-6Z-2DG" secondAttribute="bottom" constant="33" id="Qct-Lk-uba"/>
-                            <constraint firstItem="vrp-np-40H" firstAttribute="centerX" secondItem="t8u-4b-R5x" secondAttribute="centerX" id="ZZK-G3-ypz"/>
-                            <constraint firstItem="z2h-6Z-2DG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ruU-hv-NL9"/>
+                            <constraint firstItem="z2h-6Z-2DG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5e2-2v-OBG"/>
+                            <constraint firstItem="vrp-np-40H" firstAttribute="top" secondItem="z2h-6Z-2DG" secondAttribute="bottom" constant="87" id="N9G-kx-VYs"/>
+                            <constraint firstItem="t8u-4b-R5x" firstAttribute="centerX" secondItem="z2h-6Z-2DG" secondAttribute="centerX" id="R59-W4-7cU"/>
+                            <constraint firstItem="vrp-np-40H" firstAttribute="centerX" secondItem="z2h-6Z-2DG" secondAttribute="centerX" id="gQf-lP-gGJ"/>
+                            <constraint firstItem="t8u-4b-R5x" firstAttribute="top" secondItem="z2h-6Z-2DG" secondAttribute="bottom" constant="45" id="jQg-dF-oJi"/>
+                            <constraint firstItem="z2h-6Z-2DG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zhR-Wd-qHQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xtg-uI-rDI"/>
@@ -183,7 +179,6 @@
                         <outlet property="revertBtn" destination="3Ef-dO-Top" id="peh-ca-pox"/>
                         <outlet property="snailBtn" destination="7z2-Fc-2nL" id="fi8-0W-0gU"/>
                         <outlet property="stopBtn" destination="d9M-70-OvJ" id="vnN-jr-Urd"/>
-                        <outlet property="vadderBtn" destination="apf-Yy-53t" id="Odf-N8-tpk"/>
                         <outlet property="vaderBtn" destination="apf-Yy-53t" id="GQY-Oo-059"/>
                     </connections>
                 </viewController>
