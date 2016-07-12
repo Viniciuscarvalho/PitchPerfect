@@ -21,11 +21,22 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewDidLoad()
         stopRecordingButton.enabled = false
     }
+
+    func statusButtonRecordAudio() {
+
+        stopRecording.enabled = true
+        recordButton.enabled = false
+    }
+
+    func statusButtonStopRecord() {
+
+        recordButton.enabled = true
+        stopRecordingButton.enabled = false
+    }
     
     @IBAction func recordAudio(sender: AnyObject) {
+        statusButtonRecordAudio()
         recordingLabel.text = "Recording in progress"
-        stopRecordingButton.enabled = true
-        recordButton.enabled = false
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
@@ -43,8 +54,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(sender: AnyObject) {
-        recordButton.enabled = true
-        stopRecordingButton.enabled = false
+        statusButtonStopRecord()
         recordingLabel.text = "Tap to record"
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
@@ -54,7 +64,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     // MARK - Finish Record
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if (flag) {
-            self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
+            performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
         } else {
             print ("A gravação de seu audio falhou, tente novamente.")
         }

@@ -84,7 +84,6 @@
 				EAAEDDF21D2EDDAA00DA5F4B /* Storyboards */,
 				EAAEDDF11D2ED9E700DA5F4B /* ViewControllers */,
 				EAAEDDF01D2ED9E300DA5F4B /* Model */,
-				EAAEDDEF1D2ED9DF00DA5F4B /* View */,
 				EAAEDDCD1D2ECD1800DA5F4B /* AppDelegate.swift */,
 				EAAEDDD41D2ECD1800DA5F4B /* Assets.xcassets */,
 				EAAEDDD91D2ECD1800DA5F4B /* Info.plist */,
@@ -99,13 +98,6 @@
 				EAAEDDE41D2ECD1800DA5F4B /* Info.plist */,
 			);
 			path = PitchPerfectTests;
-			sourceTree = "<group>";
-		};
-		EAAEDDEF1D2ED9DF00DA5F4B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		EAAEDDF01D2ED9E300DA5F4B /* Model */ = {
