@@ -24,7 +24,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     func statusButtonRecordAudio() {
 
-        stopRecording.enabled = true
+        stopRecordingButton.enabled = true
         recordButton.enabled = false
     }
 
@@ -44,7 +44,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
         
         let session = AVAudioSession.sharedInstance()
-        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        do {
+            try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        }
         
         try! audioRecorder = AVAudioRecorder (URL: filePath!, settings: [:])
         audioRecorder.delegate = self
