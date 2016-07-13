@@ -26,18 +26,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.enabled = !recording
         stopRecordingButton.enabled = recording
     }
-
-//    func statusButtonRecordAudio() {
-//
-//        stopRecordingButton.enabled = true
-//        recordButton.enabled = false
-//    }
-//
-//    func statusButtonStopRecord() {
-//
-//        recordButton.enabled = true
-//        stopRecordingButton.enabled = false
-//    }
     
     @IBAction func recordAudio(sender: AnyObject) {
         buttonStatus(true)
